@@ -60,7 +60,7 @@ class NeuralNetworks(object):
         return cv
 
 
-    def intialNetwork(self,**kwargs):
+    def intializeNetwork(self):
 
 
         dataset= pd.read_csv(filepath_or_buffer='/vagrant/src/profiles_project/profiles_api/InitData.csv')

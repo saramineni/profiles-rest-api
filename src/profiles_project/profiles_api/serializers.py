@@ -8,3 +8,7 @@ class inputSerializer(serializers.Serializer):
 
     inpMessage = serializers.CharField(max_length=255)
     order = serializers.IntegerField()
+
+class refreshSeralizer(serializers.Serializer):
+    
+    command = serializers.CharField(max_length=20)
