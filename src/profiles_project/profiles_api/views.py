@@ -6,6 +6,7 @@ from rest_framework import viewsets
 from . import serializers
 from . import AIBot
 from . import AIHelper
+from . import models
 # Create your views here.
 
 class InternalBotView(APIView):
@@ -81,3 +82,9 @@ class testViewset(viewsets.ViewSet):
     def destroy(self, request, pk=None):
 
         return Response({'http_method':'DELETE'})
+
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+
+    serializer_class= serializers.UserProfileSerializer
+    queryset=models.UserProfile.objects.all()
